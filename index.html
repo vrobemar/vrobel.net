@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Martin Vrobel – Cloud Platforms &amp; Delivery Leader</title>
+<title>Martin Vrobel – Cloud Delivery &amp; Operations Leader</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -18,6 +18,11 @@
   header .photo{width:132px;height:132px;border-radius:50%;object-fit:cover;background:#fff;border:4px solid rgba(255,255,255,.35);margin-bottom:22px;display:block}
   header h1{font-size:clamp(30px,6vw,44px);font-weight:700;line-height:1.15}
   header .role{font-size:clamp(17px,3vw,21px);opacity:.9;margin-top:8px;font-weight:500}
+  header .sub{margin-top:10px;font-size:15px;opacity:.85;line-height:1.6;display:flex;flex-wrap:wrap}
+  header .sub span{white-space:nowrap}
+  header .sub span + span::before{content:"|";opacity:.5;margin:0 10px}
+  header .sub span.vendors{flex-basis:100%;margin-top:2px}
+  header .sub span.vendors::before{content:none}
   header .loc{margin-top:14px;opacity:.75;font-size:15px}
   header .cta{display:inline-block;margin-top:26px;background:#fff;color:var(--accent);padding:11px 22px;border-radius:8px;font-weight:600;text-decoration:none}
   header .cta.ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.6);margin-left:10px}
@@ -49,6 +54,9 @@
   .contact div{margin:6px 0}
   footer{padding:28px 0 40px;color:var(--muted);font-size:13px;text-align:center}
   @media (max-width:640px){
+    header .sub{display:block}
+    header .sub span{display:block;white-space:normal}
+    header .sub span + span::before{content:none}
     .stats{grid-template-columns:1fr 1fr 1fr;gap:8px}
     .stat{padding:12px}.stat b{font-size:22px}.stat span{font-size:12px}
     .grid{grid-template-columns:1fr}
@@ -62,7 +70,8 @@
   <div class="wrap">
     <img class="photo" src="martin.jpg" alt="Martin Vrobel" width="132" height="132">
     <h1>Martin Vrobel</h1>
-    <div class="role">Cloud Platforms &amp; Customer Delivery Leader</div>
+    <div class="role">Cloud Delivery &amp; Operations Leader</div>
+    <div class="sub"><span>Hybrid, Private &amp; Sovereign Cloud</span><span>21 years serving Nordic enterprises</span><span>Led teams of 20+</span><span class="vendors">SAP · Dell · VMware · HP · NetApp · Microsoft</span></div>
     <div class="loc">Frýdek-Místek / Ostrava, Czech Republic</div>
     <a class="cta" href="#contact">Get in touch</a>
     <a class="cta ghost" href="https://www.linkedin.com/in/martin-vrobel-3056a78" target="_blank" rel="noopener">LinkedIn</a>
