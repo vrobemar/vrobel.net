@@ -47,6 +47,13 @@
   .job .org{color:var(--accent);font-weight:500;font-size:15px;margin-bottom:8px}
   .job ul{padding-left:18px;color:var(--ink);font-size:15px}
   .job li{margin:4px 0}
+  .projects{display:grid;gap:14px}
+  .proj{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:20px 22px}
+  .proj h3{font-size:17px;line-height:1.35}
+  .proj .formerly{color:var(--muted);font-weight:400;font-size:15px}
+  .proj p{font-size:15px;color:var(--muted);margin-top:6px}
+  .proj .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .proj .meta span{background:var(--accent-soft);color:var(--accent);font-size:13px;font-weight:500;padding:4px 10px;border-radius:999px}
   .seek{background:var(--accent-soft);border-radius:12px;padding:24px}
   .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
   .tag{background:#fff;border:1px solid #c9d8e8;color:var(--accent);padding:6px 12px;border-radius:999px;font-size:14px;font-weight:500}
@@ -118,6 +125,27 @@
           <li>Led transition projects to SAP HANA</li>
           <li>Built and developed teams, working directly with customers and suppliers</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Key projects</h2>
+    <div class="projects">
+      <div class="proj">
+        <h3>Vivicta Sovereign Cloud <span class="formerly">(formerly Vivicta OneCloud Platinum)</span></h3>
+        <p>A standardised, fully automated capacity service: a highly secure platform for hosting business-critical customer workloads.</p>
+        <div class="meta"><span>Management &amp; owner representation</span><span>Vivicta</span></div>
+      </div>
+      <div class="proj">
+        <h3>Tieto Dynamic Landscape <span class="formerly">(Vivicta SAP hosting)</span></h3>
+        <p>A PaaS optimised for running business-critical SAP workloads.</p>
+        <div class="meta"><span>Management &amp; owner representation</span><span>Tieto / Vivicta</span></div>
+      </div>
+      <div class="proj">
+        <h3>Alternative KVM hypervisor</h3>
+        <p>Implementation of alternative hypervisors based on KVM.</p>
+        <div class="meta"><span>Vivicta</span></div>
       </div>
     </div>
   </section>
