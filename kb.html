@@ -52,20 +52,27 @@ p{margin:0}
 .ph{background:var(--accent-soft);color:var(--ink);padding:0 .3em;border-radius:3px;font-family:var(--f-mono);font-size:.9em}
 
 /* header */
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
-header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.8rem}
-.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink);font-family:var(--f-display);font-weight:600}
-.brand svg{flex:none}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--seal)}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--seal);color:var(--seal-fg);border-bottom:2px solid var(--accent)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.75rem}
+.brand{display:flex;align-items:center;gap:.8rem;text-decoration:none;color:var(--seal-fg);min-width:0}
+.mark{flex:none;display:grid;place-items:center;width:42px;height:42px;border:1.5px solid var(--accent);border-radius:8px;font-family:var(--f-mono);font-weight:500;font-size:.95rem;letter-spacing:.04em;color:var(--accent);position:relative}
+.mark::after{content:"";position:absolute;right:-4px;bottom:-4px;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px var(--seal)}
+.brand-text{display:grid;line-height:1.2;min-width:0}
+.brand-text strong{font-family:var(--f-display);font-weight:600;font-size:1.05rem;letter-spacing:-.01em}
+.brand-text small{font-family:var(--f-mono);font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--seal-muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 nav ul{display:flex;gap:1.4rem;list-style:none;margin:0;padding:0}
-nav a{color:var(--muted);text-decoration:none;font-size:.95rem}
-nav a:hover{color:var(--ink)}
+nav ul{align-items:center}
+nav a{color:var(--seal-muted);text-decoration:none;font-size:.95rem}
+nav a:hover{color:var(--seal-fg)}
 @media (max-width:760px){nav ul li:not(:last-child){display:none}}
 .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.15rem;border-radius:6px;font-weight:600;text-decoration:none;font-size:.95rem;border:1px solid transparent;transition:transform .15s ease,background .15s ease}
 .btn-primary{background:var(--accent);color:var(--sheet)}
 .btn-primary:hover{transform:translateY(-1px)}
 .btn-ghost{border-color:var(--line);color:var(--ink);background:var(--sheet)}
-nav .btn{padding:.45rem .9rem;color:var(--sheet)}
+nav .btn{padding:.45rem .9rem;color:var(--sheet);background:var(--accent)}
+nav .btn:hover{color:var(--sheet)}
+@media (max-width:480px){.brand-text small{letter-spacing:.04em;font-size:.66rem}}
 
 /* hero */
 .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;padding-block:4.5rem 4rem}
@@ -149,10 +156,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="Úvod">
-      <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x="1" y="1" width="24" height="24" rx="6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M7.5 13.5l3.6 3.6L18.5 9" fill="none" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>Martin Vrobel</span>
-    </a>
+    <a class="brand" href="#top" aria-label="Úvod"><span class="mark" aria-hidden="true">MV</span><span class="brand-text"><strong>Ing. Martin Vrobel</strong><small>Kybernetická bezpečnost · ISMS</small></span></a>
     <nav aria-label="Hlavní navigace">
       <ul>
         <li><a href="#sluzby">Služby</a></li>
